@@ -1,0 +1,98 @@
+site_name: 听语林 
+
+# Page tree
+nav:
+  - Home: index.md
+  - liquidnetwork:
+    - 后端Python项目常用工具解答文档: liquidnetwork/后端Python项目常用工具解答文档.md
+    - 后端开发流程与开发规范: liquidnetwork/后端开发流程与开发规范.md
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  
+  include_search_page: false
+  search_index_only: true
+
+  features:
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  font:
+    text: Roboto
+    code: Roboto Mono
+  plugins:
+    - search:
+        lang:
+          - en
+          - zh
+    - minify:
+        minify_html: true
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 暗色模式
+    - schema: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: 亮色模式
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  
+# by https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#betterem
