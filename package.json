@@ -1,0 +1,9 @@
+{
+    "name": "tingyulin",
+    "version": "1.0.0",
+    "private": false,
+    "scripts": {
+        "dev": "mkdocs serve",
+        "build": "mkdocs build -d public"
+    }
+}
